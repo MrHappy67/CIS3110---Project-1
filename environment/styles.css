@@ -1,0 +1,262 @@
+body {
+    margin:0;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size:62.5%;
+}
+
+/* styling for my hamburger menu and also the animation */
+.hamburger-menu {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 8%;
+    right: 5rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: right .7s;
+}
+
+.change .hamburger-menu {
+    right: 33rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0.1rem .2rem rgba(0,0,0,0.2);
+}
+
+/* styling for my peanut background. Contains the animation */
+.header {
+    width: 100%;
+    height: 100vh;
+    perspective: 100rem;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #DEAC5B;
+    animation: scale 25s;
+    overflow: hidden;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+/* styling for my peanut name and logo. Contains the animation */
+.webtitle {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.logo {
+    position: absolute;
+    top: 6.5%;
+    left: 6%;
+}
+
+.click-here {
+    position: absolute;
+    bottom: 2%;
+    left: 6%;
+}
+
+/* styling for peanut webpage main message. Contains the animation */
+.banner p {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+}
+
+.banner img {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+}
+
+.banner .question {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+}
+
+.web-link {
+    position: absolute;
+    bottom: 20%;
+    left: 35%;
+    width: 11%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+}
+
+.web-link:hover {
+    color:blue;
+}
+
+.return {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    width: 11%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+}
+
+.return:hover {
+    color:blue;
+}
+
+/* styling for javascript created divs. Text input div, message div, and link div */
+.form-outline {
+    position: absolute;
+    top: 60%;
+    left: 33%;
+    font-size: 24px;
+    background-color: #EECD99;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;
+   }
+  
+.data-output {
+    text-align: center;
+    position: absolute;
+    top: 63.2%;
+    left: 33%;
+    height: 10%;
+    width: 31.7%;
+    font-size: 18px;
+    color: green;
+    background-color: #EECD99;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;  
+  }
+  
+ .created-error .created-link {
+    text-align: center;
+    position: absolute;
+    top: 73%;
+    left: 33%;
+    height: 5%;
+    width: 31.7%;
+    font-size: 18px;
+    color: red;
+    background-color: #EECD99;
+    opacity: 0;
+    animation: moveBanner 1s .5s forwards;  
+  }
+  
+  .created-link:hover{
+      color: blue;
+  }
+  
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10%) rotateY(-20deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+/* styling for my sidebar for navigation. Contains the animation */
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    background-color: #EECD99;
+    transition: right .5s;
+}
+
+.change .sidebar {
+    right: 0;
+}
+
+/* menu contents, their styling, and animations */
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-link {
+    font-size: 21px;
+    line-height: 9rem;
+    color: #555;
+    position: relative;
+}
+
+.menu-link::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 10;
+    left: 0;
+    color: #c29525;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width .3s
+    ease-in-out;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
