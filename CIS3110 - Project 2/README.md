@@ -10,7 +10,7 @@
 CIS 3110
 Stefan Bund
 
-Project 2 consists of an authentication page that leads to the peanuts index.html when user is authenticated. New background has been added. Log in button has a green hover effect. Made minor changes to peanutgallery.html input boxes and renamed all peanut page titles.
+Project 2 consists of an authentication page (login.html) that leads to the peanuts (index.html) when user is authenticated. New background has been added. Log in button has a green hover effect. Made minor changes to peanutgallery.html input boxes and renamed all peanut page titles.
 
 Login.html will check if input boxes are empty. If there are values within the box, the user will be authenticated. 
 
