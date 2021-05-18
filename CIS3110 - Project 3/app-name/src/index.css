@@ -1,0 +1,11 @@
+body {
+    padding: 50px;
+    background-color: #DEAC5B;
+    font-family: 'Lato', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: flex;
+}
+
